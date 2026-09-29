@@ -149,3 +149,10 @@ The following areas were verified during final testing:
 
 The project is completed with the main pages, API integration, routing, UI improvements, and final testing completed.
 
+## Future Improvements
+
+- Connect the application with a real backend API
+- Add authentication and role-based access control
+- Add advanced document preview and download support
+- Add pagination and advanced filtering
+- Add automated unit and integration tests
