@@ -97,6 +97,20 @@ This project currently uses MSW for mock API integration, so no environment vari
 
 If a real backend API is integrated in the future, environment variables can be added for API configuration.
 
+## Git Workflow
+
+The project follows a feature-based Git workflow:
+
+- `main` - Stable production-ready code
+- `develop` - Development and integration branch
+- `feature/document-management` - Main feature development branch
+
+Development was carried out on the `feature/document-management` branch.
+
+After completing the feature, a Pull Request was created from:
+
+`feature/document-management` → `develop`
+
 ## Validation
 
 Forms are handled using React Hook Form with Zod schema validation to provide structured and reliable form validation.
