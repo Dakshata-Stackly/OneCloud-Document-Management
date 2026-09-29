@@ -91,6 +91,12 @@ Example API endpoint:
 GET /api/dashboard
 ```
 
+## Environment Variables
+
+This project currently uses MSW for mock API integration, so no environment variables are required to run the application locally.
+
+If a real backend API is integrated in the future, environment variables can be added for API configuration.
+
 ## Validation
 
 Forms are handled using React Hook Form with Zod schema validation to provide structured and reliable form validation.
