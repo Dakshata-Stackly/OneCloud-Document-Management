@@ -7,10 +7,11 @@ import App from './App'
 const queryClient = new QueryClient()
 
 async function enableMocking() {
-  if (import.meta.env.DEV) {
-    const { worker } = await import('./mocks/browser')
-    await worker.start()
-  }
+  const { worker } = await import('./mocks/browser')
+
+  await worker.start({
+    onUnhandledRequest: 'bypass',
+  })
 }
 
 enableMocking().then(() => {
