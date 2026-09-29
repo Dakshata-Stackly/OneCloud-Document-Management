@@ -225,6 +225,32 @@ The following areas were verified during final testing:
 
 The project is completed with the main pages, API integration, routing, UI improvements, and final testing completed.
 
+## Screenshots
+
+### Dashboard
+
+![Dashboard](./Output%20ScreenShot/Dashboard.png)
+
+### Documents
+
+![Documents](./Output%20ScreenShot/Document.png)
+
+### Categories
+
+![Categories](./Output%20ScreenShot/Categories.png)
+
+### Favorites
+
+![Favorites](./Output%20ScreenShot/Favorite.png)
+
+### Trash
+
+![Trash](./Output%20ScreenShot/Trash.png)
+
+### Upload Document
+
+![Upload Document](./Output%20ScreenShot/Upload%20document.png)
+
 ## Future Improvements
 
 - Connect the application with a real backend API
