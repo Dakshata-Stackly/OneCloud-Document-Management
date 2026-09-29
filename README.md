@@ -111,6 +111,20 @@ After completing the feature, a Pull Request was created from:
 
 `feature/document-management` → `develop`
 
+## Architecture
+
+The application follows a layered frontend architecture:
+
+Component → Custom Hook → API Service → Axios → MSW
+
+- **Components** handle the UI and user interactions.
+- **Custom Hooks** manage data fetching, mutations, and reusable logic.
+- **API Services** contain API request functions.
+- **Axios** is used as the HTTP client.
+- **MSW** provides mock API responses during development.
+
+This separation keeps the UI, business logic, and API communication organized and maintainable.
+
 ## Validation
 
 Forms are handled using React Hook Form with Zod schema validation to provide structured and reliable form validation.
