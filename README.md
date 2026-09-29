@@ -91,6 +91,82 @@ Example API endpoint:
 GET /api/dashboard
 ```
 
+## Environment Variables
+
+This project currently uses MSW for mock API integration, so no environment variables are required to run the application locally.
+
+If a real backend API is integrated in the future, environment variables can be added for API configuration.
+
+## Git Workflow
+
+The project follows a feature-based Git workflow:
+
+- `main` - Stable production-ready code
+- `develop` - Development and integration branch
+- `feature/document-management` - Main feature development branch
+
+Development was carried out on the `feature/document-management` branch.
+
+After completing the feature, a Pull Request was created from:
+
+`feature/document-management` → `develop`
+
+## Architecture
+
+The application follows a layered frontend architecture:
+
+Component → Custom Hook → API Service → Axios → MSW
+
+- **Components** handle the UI and user interactions.
+- **Custom Hooks** manage data fetching, mutations, and reusable logic.
+- **API Services** contain API request functions.
+- **Axios** is used as the HTTP client.
+- **MSW** provides mock API responses during development.
+
+This separation keeps the UI, business logic, and API communication organized and maintainable.
+
+## TanStack Query
+
+TanStack Query is used for managing server state in the application.
+
+It handles:
+
+- Fetching dashboard and document data
+- Caching server responses
+- Loading and error states
+- Creating, updating, and deleting data
+- Refetching data after mutations
+
+Custom hooks connect the UI components with TanStack Query and API services.
+
+This keeps server-state management separate from local UI state.
+
+## State Management
+
+The application separates server state and local UI state.
+
+### Server State
+
+TanStack Query manages data received from the API, including:
+
+- Dashboard data
+- Documents
+- Categories
+- Favorites
+- Trash data
+
+### Local State
+
+React state and hooks manage UI-specific state, including:
+
+- Search input
+- Filter selections
+- Modal visibility
+- Form interactions
+- UI controls
+
+This separation keeps data management predictable and avoids unnecessary global state management.
+
 ## Validation
 
 Forms are handled using React Hook Form with Zod schema validation to provide structured and reliable form validation.
@@ -149,3 +225,36 @@ The following areas were verified during final testing:
 
 The project is completed with the main pages, API integration, routing, UI improvements, and final testing completed.
 
+## Screenshots
+
+### Dashboard
+
+![Dashboard](./Output%20ScreenShot/Dashboard.png)
+
+### Documents
+
+![Documents](./Output%20ScreenShot/Document.png)
+
+### Categories
+
+![Categories](./Output%20ScreenShot/Categories.png)
+
+### Favorites
+
+![Favorites](./Output%20ScreenShot/Favorite.png)
+
+### Trash
+
+![Trash](./Output%20ScreenShot/Trash.png)
+
+### Upload Document
+
+![Upload Document](./Output%20ScreenShot/Upload%20document.png)
+
+## Future Improvements
+
+- Connect the application with a real backend API
+- Add authentication and role-based access control
+- Add advanced document preview and download support
+- Add pagination and advanced filtering
+- Add automated unit and integration tests
