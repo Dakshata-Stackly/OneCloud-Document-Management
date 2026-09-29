@@ -125,6 +125,48 @@ Component → Custom Hook → API Service → Axios → MSW
 
 This separation keeps the UI, business logic, and API communication organized and maintainable.
 
+## TanStack Query
+
+TanStack Query is used for managing server state in the application.
+
+It handles:
+
+- Fetching dashboard and document data
+- Caching server responses
+- Loading and error states
+- Creating, updating, and deleting data
+- Refetching data after mutations
+
+Custom hooks connect the UI components with TanStack Query and API services.
+
+This keeps server-state management separate from local UI state.
+
+## State Management
+
+The application separates server state and local UI state.
+
+### Server State
+
+TanStack Query manages data received from the API, including:
+
+- Dashboard data
+- Documents
+- Categories
+- Favorites
+- Trash data
+
+### Local State
+
+React state and hooks manage UI-specific state, including:
+
+- Search input
+- Filter selections
+- Modal visibility
+- Form interactions
+- UI controls
+
+This separation keeps data management predictable and avoids unnecessary global state management.
+
 ## Validation
 
 Forms are handled using React Hook Form with Zod schema validation to provide structured and reliable form validation.
